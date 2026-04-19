@@ -1,10 +1,18 @@
-#ifndef __MAIN__
-#define __MAIN__
+#ifndef USH_SHELL_H
+#define USH_SHELL_H
 
-#define USH_BUFF_SIZE 1024
+enum {
+  USH_BUFF_SIZE = 1024,
+  TOK_BUFF_SIZE = 64,
+};
+
+#define USH_TOK_DELIM " \t\n\r\a"
 
 char *ush_read_line(void);
-int ush_loop(void);
+char **ush_lexer(char *line);
+void ush_loop(void);
+int ush_launch(char **args);
+int ush_execute(char **args);
 
 typedef struct cmd {
   char *m_cmd;

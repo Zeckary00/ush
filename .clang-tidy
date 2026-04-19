@@ -1,0 +1,13 @@
+Checks: '*,
+        -llvmlibc-restrict-system-libc-headers,
+        -altera-unroll-loops,
+        -clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling,
+        -cppcoreguidelines-macro-to-enum,
+        -modernize-macro-to-enum,
+        -readability-identifier-length,
+        -llvm-header-guard,
+        -altera-struct-pack-align,
+        -concurrency-mt-unsafe,
+        -altera-id-dependent-backward-branch'
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
