@@ -7,7 +7,7 @@
 
 int ush_launch(char **args) {
   pid_t pid = 0;
-  pid_t wpid = 0;
+  // pid_t wpid = 0;
   int status = 0;
   pid = fork();
   if (pid == 0) {
@@ -19,7 +19,7 @@ int ush_launch(char **args) {
     perror("ush");
   } else {
     do {
-      wpid = waitpid(pid, &status, WUNTRACED);
+      waitpid(pid, &status, WUNTRACED);
     } while (!WIFEXITED(status) && !WIFSIGNALED(status));
   }
   return 1;
