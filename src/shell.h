@@ -14,6 +14,10 @@ void ush_loop(void);
 int ush_launch(char **args);
 int ush_execute(char **args);
 
+int ush_cd(char **args);
+
+int ush_help(char **args);
+
 typedef struct cmd {
   char *m_cmd;
   char **s_cmd;

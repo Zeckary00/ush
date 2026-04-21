@@ -11,11 +11,11 @@ int ush_execute(char **args){
   }
 
   if (strcmp(args[0], "cd") == 0) {
-    printf("cd\n");
-  } else if (strcmp(args[0], "help")) {
+    ush_cd(args);
+  } else if (strcmp(args[0], "help") == 0) {
     printf("help\n");
-  } else if (strcmp(args[0], "exit")) {
-    printf("exit\n");
+  } else if (strcmp(args[0], "exit") == 0) {
+    return 0;
   }
 
   return ush_launch(args);
